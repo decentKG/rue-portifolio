@@ -1,0 +1,870 @@
+@font-face {
+  font-family: "jost";
+  src: url(../fonts/Jost/Jost-VariableFont_wght.ttf);
+}
+.filter {
+  width: 15rem;
+  height: 15rem;
+  background-color: var(--main-color);
+  position: absolute;
+  filter: blur(60px);
+  position: absolute;
+  top: 48rem;
+  left: 45rem;
+  border-radius: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Jost-Medium";
+}
+
+.logo img {
+  width: 10rem;
+  height: 5rem;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+  transition: 0.5s;
+}
+
+* {
+  font-family: "jost" !important;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: progress;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: 0.5s;
+  font-weight: bolder;
+}
+
+.navbar .btn:hover {
+  color: var(--second-bg-color);
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.header .humburger {
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  width: 4rem;
+  background-color: transparent;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.header .humburger .line {
+  display: none;
+  width: 90%;
+  height: 3px;
+  background-color: var(--main-color);
+  border-radius: 40px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.taps {
+  cursor: progress;
+  cursor: pointer;
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: var(--main-color);
+  text-shadow: 0 0 0.3rem var(--main-color);
+}
+
+.home-content h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.home-content {
+  font-size: 1.6rem;
+}
+
+.home-img img {
+  width: 50rem;
+  height: 55rem;
+  animation: floatImage 4s ease-in-out infinite;
+  border-radius: 49%;
+  box-shadow: 0 0 3.5rem var(--main-color);
+  /* background-color: var(--main-color); */
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.8rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.text-animation {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.text-animation span {
+  position: relative;
+}
+
+.text-animation span:before {
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+
+.text-animation span:after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+.about-content .text-animation span:after {
+  background-color: var(--second-bg-color);
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid var(--main-color);
+  }
+}
+@keyframes words {
+  0%, 20% {
+    content: "Digital Marketer";
+  }
+  21%, 40% {
+    content: "Digital Marketer";
+  }
+  41%, 60% {
+    content: "Blogger";
+  }
+  61%, 80% {
+    content: "Web Designer";
+  }
+  81%, 100% {
+    content: "Content creator";
+  }
+}
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0.4rem solid var(--main-color);
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s;
+  padding: 2.5%;
+  box-shadow: 0 0 0.8rem var(--main-color);
+}
+.social-media a img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.social-media a:hover {
+  box-shadow: none;
+  rotate: 360deg;
+  transition: all;
+  transition-duration: 0.6s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background-color: var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.8rem;
+  color: var(--second-bg-color);
+  font-weight: 700;
+  transition: 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2.5rem var(--main-color);
+  transform: translateY(5px);
+  z-index: 100;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--second-bg-color);
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.about img {
+  width: 45rem;
+  height: 50rem;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background-color: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+}
+.services-container .services-box img {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 6%;
+}
+.services-container .services-box h3 {
+  font-size: 2.6rem;
+}
+.services-container .services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+.services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.01);
+}
+
+.portfolio {
+  background-color: var(--second-bg-color);
+}
+.portfolio h2 {
+  margin-bottom: 4rem;
+}
+.portfolio .portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3%;
+  border-radius: 30px;
+}
+.portfolio .card1 {
+  background-image: url("../images/mediamodifier_image.png");
+  height: 50vh;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem black;
+  transition: 0.6s;
+}
+.portfolio .card1 .overlay {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.portfolio .card1 .overlay h4 {
+  font-size: 3rem;
+}
+.portfolio .card1 .overlay p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio .card1 .overlay button {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio .card1:hover {
+  scale: 1.01;
+  box-shadow: 0 0 4rem var(--main-color);
+}
+.portfolio .card1:hover .overlay {
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.portfolio .card2 {
+  background-image: url("../images/1704557862759.jpg");
+  height: 50vh;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--bg-color);
+  transition: 0.2s;
+}
+.portfolio .card2 .overlay {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+.portfolio .card2 .overlay h4 {
+  font-size: 3rem;
+}
+.portfolio .card2 .overlay p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio .card2 .overlay button {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio .card2:hover {
+  scale: 1.01;
+  box-shadow: 0 0 4rem var(--main-color);
+}
+.portfolio .card2:hover .overlay {
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.portfolio .card3 {
+  background-image: url("../images/eco4.png");
+  height: 50vh;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--bg-color);
+  transition: 0.6s;
+}
+.portfolio .card3 .overlay {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.portfolio .card3 .overlay h4 {
+  font-size: 3rem;
+}
+.portfolio .card3 .overlay p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio .card3 .overlay button {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio .card3:hover {
+  scale: 1.01;
+  box-shadow: 0 0 4rem var(--main-color);
+}
+.portfolio .card3:hover .overlay {
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.portfolio .card4 {
+  background-image: url("../images/store-1.png");
+  height: 50vh;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--bg-color);
+  transition: 0.6s;
+}
+.portfolio .card4 .overlay {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.portfolio .card4 .overlay h4 {
+  font-size: 3rem;
+}
+.portfolio .card4 .overlay p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio .card4 .overlay button {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio .card4:hover {
+  scale: 1.01;
+  box-shadow: 0 0 4rem var(--main-color);
+}
+.portfolio .card4:hover .overlay {
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.portfolio .card5 {
+  background-image: url("../images/tig.PNG");
+  height: 50vh;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--bg-color);
+  transition: 0.6s;
+}
+.portfolio .card5 .overlay {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.portfolio .card5 .overlay h4 {
+  font-size: 3rem;
+}
+.portfolio .card5 .overlay p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio .card5 .overlay button {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio .card5:hover {
+  scale: 1.01;
+  box-shadow: 0 0 4rem var(--main-color);
+}
+.portfolio .card5:hover .overlay {
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.portfolio .card6 {
+  background-image: url("../images/special-3.png");
+  height: 50vh;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--bg-color);
+  transition: 0.6s;
+}
+.portfolio .card6 .overlay {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.portfolio .card6 .overlay h4 {
+  font-size: 3rem;
+}
+.portfolio .card6 .overlay p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio .card6 .overlay button {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio .card6:hover {
+  scale: 1.01;
+  box-shadow: 0 0 4rem var(--main-color);
+}
+.portfolio .card6:hover .overlay {
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.contact textarea {
+  resize: none;
+}
+.contact h2 {
+  margin-bottom: 3rem;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input {
+  width: 49%;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  background-color: var(--second-bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  box-shadow: 0 0 2rem black;
+  margin-bottom: 5%;
+  border: 2px solid var(--main-color);
+  transition: 0.5s;
+}
+.contact input,
+.contact textarea:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 9%;
+  background-color: var(--second-bg-color);
+  position: relative;
+}
+.footer .btn {
+  position: fixed;
+  right: 80px;
+  bottom: 30px;
+  border-radius: 10px;
+  padding: 0.5%;
+}
+.footer .footer-text p {
+  font-size: 1.4rem;
+}
+
+.white {
+  width: 100%;
+  height: 1rem;
+  border-radius: 20px;
+  background-color: var(--text-color);
+  margin-top: 3rem;
+  box-shadow: 0 0 0.3rem var(--text-color);
+}
+.white .development {
+  height: 100%;
+  width: 20%;
+  background-color: var(--main-color);
+  border-radius: 20px;
+}
+.white .design {
+  height: 100%;
+  width: 40%;
+  background-color: var(--main-color);
+  border-radius: 20px;
+}
+.white .marketing {
+  height: 100%;
+  width: 60%;
+  border-radius: 20px;
+  background-color: var(--main-color);
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  .services {
+    padding-bottom: 7rem;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 768px) {
+  .home-img img {
+    width: 40rem;
+    height: 43rem;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    border-radius: 50%;
+  }
+  .portfolio .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .header .humburger .line {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: var(--bg-color);
+    border-top: 1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1 rem rgba(0, 0, 0, 0.2);
+    display: none;
+    transition: 0.5s;
+  }
+  .navbar.active {
+    display: block;
+    transition: 0.5s;
+  }
+  .navbar a {
+    display: block;
+    flex-direction: column;
+    font-size: 2rem;
+    margin: 3rem 0;
+    transition: 0.5s;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-content .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about img {
+    width: 40vh;
+    height: 43vh;
+    margin-top: 4rem;
+  }
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 618px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
